@@ -57,8 +57,8 @@ public class AlumnoController {
 	@GetMapping("/porDni/{dni}")
 	@ResponseBody
 	public ResponseEntity<List<Alumno>> listaPorDni(@PathVariable("dni") String dni){
-		List<Alumno> lista=  service.listaAlumnoPorNombreLike(dni);
-		 return ResponseEntity.ok(service.listaAlumno());
+		List<Alumno> lista=  service.listaPorDni(dni);
+		 return ResponseEntity.ok(lista);
 	 
 	}
 	
